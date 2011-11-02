@@ -1,0 +1,18 @@
+"x|X":        delete charater under the cursor|before the cursor
+"dd|:d":      delete the current line (two variants)
+"gU":         uppercase (move|visual)
+">|<|=":      intend|unintend|reintend text (visual)
+">>|<<":      intend|unintend a line
+
+# modify
+"X|x|r":      delete a charater before|after the cursor|replace the character
+"s":          change one character and insert
+"d":          delete text by motion
+"dd":         delete the line
+"C|D":        change|delete the end of the line
+"D":          delete the highlighted lines (visual)
+":2d3":       delete 2,3,4 lines
+"S":          change the line
+"J|gJ":       join with next line with|without space separator
+":reg":       display registers
+

@@ -1,0 +1,2 @@
+---
+"articles_path(:anchor => 'content')": generate /acticles#content using resource-oriented syntax

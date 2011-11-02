@@ -1,0 +1,86 @@
+---
+# rails generic
+"arel, routing dls, bundler, safe html, dynamic_form, non-rest routes,": differences between rails 3 and 2.3
+
+# controller
+"session[:original_uri] = request.request_uri": remember current request address (to use after login)
+"redirect_to request.referer": redirect to a page that sent the request
+"redirect_to @user": redirect to page "/users/show/#{@user.id}"
+"index, show, new, create, edit, update, destroy": REST actions
+"flash[:success] = 'Welcome!'": show 'Welcome!' success message
+
+# active record
+"@user.microposts.paginate :page => params[:page]|=will_paginate @microposts": select a page from @user.microposts | display pagination controll
+"@user.update_attributes params[:user]": modify and save attributes of a user from parameters
+"@user.destroy": remove a @user from database
+"render(:update) { |p| p.replace_html :y, :partial => 'x' }": use RJS to render partial x into DOM element y
+"def index;@people = Person.all; respond_to { |f| f.html; f.xml { render :xml => @people.to_xml } } end": people/index action with web service support
+"has_many :orders, :dependent => :destroy": has many orders with cascaded destruction
+"create_table(:suppliers) {}; create_table(:accounts) { |t| t.integer :supplier_id }": "minimal migration for Supplier.has_one :account"
+"belongs_to :imageable, :polymorphic => true; has_many :pictures, :as => :imageable; has_many :pictures, :as => :imageable": "describe following: Picture.imagable=Employee|Product;Employee.pictures;Product.pictures (skip class declarations)"
+"create_table(:pictures) { |t| t.references(:imageable, :polymorphic => true) }": "migration for Pictures.belongs_to :imageable, :polymorphic => true"
+"has_many :subordinates, :class_name => 'Employee', :foreign_key => 'manager_id'": "describe recursive relation: employees.manager_id"
+"child objects saved; child objects destroyed after child.mark_for_destruction": what happens to :autosave => true if parent is saved?
+"has_one :author, :autosave => true|post.author.mark_for_destruction": Post.has_one :author. What will cause autodestroying of post.author on post.save?
+":class_name|:foreign_key": "has_many :in_links, ?? => 'Link', ?? => :to_id"
+":source": "has_many :parent_entries, :through => :in_links, ?? => :from"
+"User.find_each(:batch_size => 50) { }": process users in batches by 50
+"User.first(:conditions => {:name => 'x'})": "2.3: first User with name='x'"
+"User.all(:order => 'created_at')": find all users and order by 'created_at'
+"conditions,select,joins,group,having,order,limit,offset,include,readonly": list options for function User.all
+"User.all(:joins => 'left outer join addresses on address.user_id = users.id')": left join addresses to users
+"User.all(:joins => :addresses)": inner join addresses to User.all
+"find_by_x,find_by_x!,find_all_by_x,find_last_by_x,find_or_create_by_x,find_or_initialize_by_x": List all essential dynamic finders (e.g. find_by_x)
+
+# validation
+"validates_associated :books|has_many :books, :validate => true": validate association (2 variants)
+"validates_confirmation_of :password": validate that passwords are equal
+"validates_format_of :email, :with => /R/": validate email by RE /R/
+"validates_inclusion_of :x, :in => %w[1 2 3]": validates that x in %w[1 2 3]
+"validates_uniqueness_of :title, :scope => :user_id": validates that title is unique for the user's posts
+"allow_nil, allow_blank, if, unless, on, message": enumerate common validation options
+
+# testing
+"response.should redirect_to target_path": "test redirection to target_path"
+"flash[:success].should =~ /R/": test success message by /R/
+"delete 'destroy', :id => i": "test: send /destroy request"
+"response.should be_success": "test: response is ok"
+"response.should have_tag('title', 'X')": test that page title is X
+"xhr :post, 'create'": post AJAX /create in rspec
+"require 'spec_helper'; integrate_views": significant lines in the beginning of a controller_spec
+"response.should have_tag('a.link', :with => {:href => '/x'})": test that response has <a class='link' href='/x'>...
+"response.should have_tag('a') { with_tag('a') }": test nested tag a in a
+"response.should have_tag('a[href*=b]', :text => 'c')": test that a whose href contains b has text c
+
+#command line
+"rake gems:install": bundle install for rails 2.3
+
+# HAML
+"=javascript_include_tag 'jquery.js'": "<script src='/javascripts/jquery.js'></script> in HAML"
+"=csrf_meta_tag": protect site against request forgery attacks
+
+# routes
+"map.root :controller => 'pages', :action => 'home'": "map route / to pages#home"
+"map.help '/help', :controller => 'pages', :action => 'help'": "create named route /help to pages#help"
+"map.resources :sessions, :only => [:new, :create, :destroy]": "map /new, /create, /destroy in /sessions"
+"map.resources :users, :member => {:feed => :get}": map all /users REST actions + users#feed
+"map.resources :admin_photos, :controller => 'admin/photos'": define resource admin_photos for admin/photos controller
+"map.connect 'xx/yy', :controller => 'xx', :action => 'yy'": "translate to 2.3.8: match 'xx/yy' => 'xx#yy'"
+"map.connect '/c', :controller => 'c', :action => 'a', :defaults => {:format => 'f'}": map /c to c#a with synthetic parameter format=f
+"map.connect '/c/*other', :controller => 'c', :action => 'a'": match all path segments after /c/ to parameter other of c#a
+"map.connect '/c/a.:format', :controller => 'c', :action => 'a'": match c/a to c#a with format parameter
+"Mime::Type.register 'image/jpg', :jpg": register jpg response type
+
+# views
+
+"render :partial => 'x', :locals => {:y => 'z'}": render partial x with parameter y=z
+"link_to h(@user.name), @user": link to a user's page
+"- form_remote_for @user do |f|": remote form in 2.3 for a @user
+"- form_for :session, session_path, :html => {:method => :post} do |f|": form for session with path session_path and method=POST (Rails 2.3, HAML syntax)
+
+# VIM: 
+# insert empty line
+# quick open directory
+# MiniBufExplorer
+# ? autosave for has_many ?
+# 60->20->5

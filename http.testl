@@ -1,0 +1,11 @@
+"status number and reason phrase": what does first line of HTTP response contain?
+"1) close connection after single request/response pair 2) keep-alive-mechanism": how connection is maintained in 1) HTTP <=1.0 2) HTTP 1.1
+"HTTP Secure": name for https
+"distinguishes between various DNS sharing a single IP address": purpose of Host request header
+"Etag": header that identifies a cached version of the response
+"Content-Type: text/html; charset=UTF-8": header telling that the response is UTF-8 HTML
+"Connection: close": response header tells that the connection will be closed after response completion
+"an initial line; optional header lines; blank line; optional body": structure of HTTP request and response
+"GET / HTTP/1.1": first request line for ya.ru
+"Host: ya.ru": second request line for ya.ru
+"HTTP/1.1 200 OK": first line of successful response

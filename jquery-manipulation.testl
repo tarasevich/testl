@@ -1,0 +1,44 @@
+---
+"before, prepend, append, after": methods that insert its argument (order by insertion position)
+"insertBefore, prependTo, appendTo, insertAfter": methods that insert matched elements (order by insertion position)
+"(name), (name, value), (map), (name, function(index, oldValue))": list signatures for .attr()
+"attr, css, prop": "list methods that support signatures: (name), (name, value), (map), (name, function(index, oldValue))"
+"nothing is changed": What happens if a.attr('href', function() {})?
+"detach": remove matched elements from DOM WITHOUT removing data and events
+"remove": remove matched elements from DOM AND removing data and events
+"empty": remove from DOM child nodes of matched elements
+"empty": clean inner HTML of the matched elements
+"unwrap": remove parents from DOM, but leave the matched elements in their place
+"detach, empty, remove, unwrap": list DOM removal methods
+"replaceAll, replaceWith": list DOM replacement methods
+"replaceAll, wrapAll, insertBefore, prependTo, appendTo, insertAfter": list methods that might move in DOM the matched elements
+"replaceWith, before, prepend, append, after": list methods that might move in DOM the argument
+"clone": methods that deep copy the matched elements
+"wrap, wrapAll, wrapInner": methods that copy argument
+"replaceAll, wrap, wrapAll, wrapInner, insertBefore, insertAfter, appendTo, prependTo": methods that treat string as selectors
+"replaceWith, wrapInner, html, before, prepend, append, after": methods that treat string as HTML
+"text": methods that treat string argument as text
+"detach, remove, replaceWith": list methods that remove matched elements from DOM
+"empty, html, text": methods that remove child elements from DOM
+"addClass, hasClass, removeClass, toggleClass": all class related methods
+"computed height of the first matched element": what height() method returns?
+"computed height of the first matched element with padding but without border": what innerHeight() method returns?
+"offset": current coordinates of the first matched element relative to document
+"position": current coordinates of the first matched element relative to offset parrent
+"height, innerHeight, outerHeight": order ascendingly functions that return heights
+"offset, height, width, html, text, val": "methods that support signatures: (), (value), (function(index, oldValue))"
+"-2*padding": height() - innherHeight() = ?
+"data": "What is leak-safe method to set values on DOM elements?"
+"scrollLeft": horizontal scrolling position
+"combined text content of all matched elements and their descendants": what returns text()
+"scrollTop, scrollLeft": methods with signatures () and (value)
+"wrap": put argument around each matched element (at the same position in DOM)
+"wrapInner": put argument as child of each matched element around a content of latter
+"unwrap, wrap, wrapAll, wrapInner": methods in category DOM Insertion, Around
+"argthis": "What does it return? $('<b>this</b>').wrapInner('<b>arg</b>').text()"
+"$('#a').html($('#b'))": "empty content of #a and move #b to be its child"
+"html": methods inapplicable on XML
+"text": method that gets/sets inner text
+"CSS position=absolute, fixed, or relative": What is positioned element?
+"offset, offsetParent, position, scrollLeft, scrollTop": methods from Offset category
+"innerHeight, outerHeight, innerWidth, outerWidth, position": "'read-only' methods"

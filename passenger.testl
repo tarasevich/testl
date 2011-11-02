@@ -1,0 +1,22 @@
+---
+# install ssh server
+"ls &": start ls in background
+"apachectl restart": restart apache
+"passenger start": start standalone passenger
+"rvmsudo": run rvm ruby under root
+"rvmsudo passenger-install-nginx-module": install passenger module for nginx
+"server { listen 80; server_name a.com; root /var/www/a/public; passenger_enabled on; }": nginx configuration for a rails application located at /var/www/a to run on port 80 and domain a.com
+"/opt/nginx/conf/nginx.conf": path to nginx configuration file
+"/opt/nginx/sbin/nginx -t": test nginx configuration
+
+# vim
+"/searchstr": Search forward through the file for searchstr
+"?searchstr": Search backwards for searchstr
+":s/srch/rplc/": Search current line (first occurance) of srch and replace with rplc
+":%s/srch/rplc/g": Search an entire file for srch and replace with rplc
+":2,4s/srch/rplc/gc": Search line 2 to 4 WITH PROMPT for srch and replace with rplc
+"v|V|ctrl-v": visual selection|line selection|block selection
+"o|O": start typing on empty line BELOW|ABOVE the current line
+"u|ctrl-r|.|U": undo|redo|repeat the change|undo all changes in the current line
+"k|l|j|h|^|$|3G|G": moves cursor up|right|down|left|to the beginning|to the end of the line|to 3rd line
+

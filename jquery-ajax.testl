@@ -1,0 +1,31 @@
+---
+"$.ajax url: '/index.html', success: (data) -> alert data": request /index.html and alert result on success
+"$.ajax url: '/index.html', error: (xhr) -> alert xhr.responseText": request /index.html and alert result on error
+"$.ajax url: '/update.php', type: 'POST'": POST request to /update.php
+"$.ajax url: '/some.php', data: 'a=b&c=d'": request /some.php with params a=b&c=d
+"$.ajax(url: '/some.php', async: false).responseText": request /some.php synchronously and get result
+"$.ajax url: '/some.js', dataType: 'script'": request and eval /some.js
+"$.ajax url: '/some.php', dataType: 'xml', success: (x, c, r) -> alert r.responseText": request /some.php and alert XML response
+"$.ajax url: '/some.php', headers: {A: 'B'}": request /some.php with header A=B
+"script is evaluated": "what is the expected effect: $.ajax(url: '/some.js', dataType: 'script', success: -> {})"
+"$.parseJSON": which function is used to parse json dataType?
+"$.param": "which function translates data: {a: 'b'} into query string?"
+"cache: false": prevent caching of a page
+"context: el": how to make element el to be this for ajax-related callbacks
+"crossDomain: true": What is required for server-side redirection to another domain?
+"by response MIME type": How is default dataType value computed?
+"when inserted in the DOM": "When are scripts evaluated for dataType: 'html'?"
+"before calling callbacks": "When are scripts evaluate for dataType: 'script'?"
+"(data, statusCode, jqXHR)": arguments for a success callback
+"username, password": options used for authentication
+"$.ajax url: 'x.xml', success: (data, statusCode, xhr) -> alert xhr.getResponseHeader 'Content-Type'": request 'x.xml' and alert response content type
+"(url, data, success, dataType)": specify parameters for $.get method
+"getScript": request javascript
+"getJSON": request JSON
+"$('#j').load('/h.html #i')": request /h.html, extract element with id=i and replace with it content of element with id=j
+"load": which of $.ajax shortcuts have 'complete' callback?
+"get, getJSON, getScript, post": which of $.ajax shortcuts have 'success' callback?
+"getScript": which of $.ajax shortcuts does not have 'data' argument
+"$('form').serialize()": make query string from form controls
+"serialize, param": methods that return query string
+# -> 1 -> 0

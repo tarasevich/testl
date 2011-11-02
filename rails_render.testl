@@ -1,0 +1,32 @@
+"link_to 'Remove', @book, :confirm => 'Are you sure?', :method => :delete": link to delete @book with dialog 'Are you sure?'
+"render_to_string": analog of render that returns a string instead of sending text to browser
+"action": "render :?? => 'edit' # render non-default view"
+"template": "render :?? => 'products/show' # render a view from different controller"
+"file": "render :?? => '/u/apps/x/views/c/edit' # render view from arbitrary path"
+"render :file => fp, :layout => true": render view file fp with default layout
+"render :inline => '%p', :type => :haml": render HAML snippet '%p'
+"render :text => 'X'": render plain text 'X'
+"text, file": which render options do not apply current layout (INCOMPLETE)
+"render :json => @product": convert @product to json and render
+"json, xml": which rendering options automatically convert an object to corresponding representation?
+"text, json, xml, js, inline": "'by value' options for render method"
+"content_type, layout, status, location": 4 common options for render method (3 of them are HTTP headers)
+"layout 'l'|layout :layout_method|layout proc {'l'}": "variants for customizing a layout (use layout 'l')"
+"except, only": options for layout method
+"layout nil": how to undefine inherited layout?
+"redirect_to, link_to, url_for": which methods accept varying URI options?
+"link_to 'Back', :back": link to referrer
+"link_to 'RSS Feed', params.merge(:format => :rss)": link to RSS Feed with same URI
+"302 temporary redirect": which status uses redirect_to method?
+"head :bad_request": header only response with '400 Bad Request' status
+"auto_discovery_link_tag, javascript_include_tag, stylesheet_link_tag, image_tag, video_tag, audio_tag, favicon_link_tag": 7 asset tag methods
+"audio_path, image_path, javascript_path, stylesheet_path, video_path": methods that return paths to assets
+"javascript_include_tag :all, :recursive => true, :cache => true": include all js including subfolders and save to file 
+"config.perform_caching = true": how to enable caching?
+"javascripts/all.js": the default js file for caching
+"image_tag 'x.png', :onmouseover => 'y.png'": define alternative image for onhover
+"yield :head|content_for :head|content_for?(:head)": how to define named parts for a layout (in layout|in view|check)
+"same folder as partial": where layouts for partials are placed?
+"customer": "What is the name of variable that introduces in partial following expression: render :partial => 'customer', :object => @new_customer "
+"render :partial => 'product', :collection => @products, :as => :item": render @products with partial 'product' and local variable 'item'
+"render @products, :spacer_template => 's'": render @products using partial separator _s.

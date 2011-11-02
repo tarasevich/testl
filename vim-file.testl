@@ -1,0 +1,19 @@
+# file commands
+":x|ZZ":       save if changed and exit (2 vars)
+":wq":         save and exit
+":sav fn":     save as fn
+":5w>>fn":     append range 5 to file 
+":e":          reload the current file
+":wn":         write file and edit next
+
+# windows
+":sp|^ws|:vs": new window above|above|to left
+"^wn":         new empty window
+":q":          close window
+"^wo":         make current window one on screen
+"^wk|^wj":     move to window above|below
+
+# buffers
+":ls":         list buffers
+"gf":          open file under the cursor
+"^g":          show file info

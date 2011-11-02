@@ -1,0 +1,3 @@
+---
+newline and encoding conversion: are disabled in bin mode
+File.open(fp, 'r:UTF-16LE', &:lines): get lines enumerator for file path fp in 'UTF-16LE'

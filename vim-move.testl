@@ -1,0 +1,53 @@
+# scrolling
+"^y|^e":       scroll line up|down
+"^u|^d":       scroll half a screen up|down
+"zt|zz|zb":    scroll current line to the top|middle|bottom of window
+
+# moving
+"^f|^b":       page up|down
+"B|W":         space separated word left|right
+"gE|E":        end of space separated word left|right
+"b|w":         punctuation separated word left|right
+"ge|e":        end of punctuation separated word left|right
+"{|}":         beginning of previous|next paragraph
+"(|)":         beginning of previous|next sentence
+"0|^|$":       first char|first non-wightspace|last char in line
+"-|+":         line up|down and home
+"H|M|L":       first|middle|last line on the screen
+"5H|5L":       the 5th line from the beginning|end on the screen
+"5|":          go to 5th column
+":5|5G":       go to 5th line (2 variants)
+"gg|G":        go to the first|last line
+"30%":         position at 30% of file
+"`[|`]":       go to beginning|end of the inserted text
+"`[|`]":      go to begin|end of previously operated(inserted) text
+"o":           exchange cursor position with start of highlighting
+"%":           move to maching bracket (or similar)
+
+# search
+"/pat/e":     search pat and set cursor to end of match
+"/pat/s-2":   search pat and set cursor 2 chars before beginning
+"/be\_.*en/": search from be to en through multiple lines
+"/be\_s*en/": search whitespaces including new line
+"/*.be\&*.en/": search be and en in any order
+".{_}":       non-greedy search
+"\1":         back reference in search in first group
+"N|n":        previous|next search occurance
+"#|*":        previous|next occurence of the word under the cursor
+"Fx|fx":      previous|next character x
+"Tx|tx":      near previous|next character x
+",|;":        repeat T, t, F, f to the left|right
+":g/x/#":    display all lines with numbers that contain x
+
+# marks
+mx:           set mark x 
+"'x":         go to mark x
+"`.":         go to last edit position
+":marks":     list marks
+"g;":         cycle through last edits
+
+# jump
+"''":         undo last jump (once, vi version)
+"^o":         undo last jump (repeatable)
+"^i":         redo last jump
+

@@ -1,0 +1,11 @@
+---
+"$.merge(a, b)": destructive concatenation of arrays a and b
+"$.makeArray": convert array-like object into array
+"$.inArray(1, [1,2])": get index of 1 in array [1, 2]
+"$.grep": analog of select in Ruby
+"milliseconds since Jan 1, 1970": What returns $.now?
+"$.proxy(this, fn)": make this to be context of fn
+"$.trim": the only string function in jQuery namespace
+"(element, index)": arguments of callback to $.map
+"(index, element)": arguments of callback to $.each
+"jQuery.noConflict()": release $ sign from jQuery to another library

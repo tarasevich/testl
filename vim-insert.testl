@@ -1,0 +1,9 @@
+# insert mode
+"^a":         insert previously inserted text (insert)
+"^r5":        insert register 5 (insert)
+"^p|^n":      text completion before|after cursor (insert)
+"^w":         delete word before cursor (insert)
+"^u":         delete all inserted characters in the current line (insert)
+"^d|^t":      shift left|right (insert)
+"^oc":        execute c in temporary command mode (insert)
+"^j":         break line (insert)

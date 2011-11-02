@@ -1,0 +1,18 @@
+---
+newline and encoding conversion: are disabled in bin mode
+"rb:ASCII-8BIT": open mode for binread
+IO.binread(fp, l, o): read in bin mode from file fp starting from o l bytes
+IO.copy_stream(fps, fpd): copy file fps to file fpd
+IO.foreach(fn): lines enumerator for file fn without encoding conversion
+internal_encoding: encoding of strings 
+external_encoding: encoding of the file
+"File.open(fp, 'w+:UTF-16LE')": open file fp in read-write mode and encoding UTF-16LE
+"IO.popen(cmd, &:readline)": read line from command cmd
+IO.read(fp): read the whole file fp
+codepoints: enumerator of integer values for characters in the stream
+flush vs fsync: flush from ruby buffers vs flush to disk (including OS buffers)
+lines or each_line: line enumerator for the opened file
+"IO.popen(cmd, &:pid)": execute cmd and get the child process id
+pos: get/set current offset in bytes
+read: reads from the opened file without conversion
+File.open(fp, 'r:UTF-16LE', &:lines): get lines enumerator for file path fp in 'UTF-16LE'

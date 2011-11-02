@@ -1,0 +1,3 @@
+"*": select any element
+"a\\.b": select element with id=a.b
+"[a|='v'

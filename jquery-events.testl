@@ -1,0 +1,21 @@
+"click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout, mouseenter, mouseleave": list mouse events
+"keydown, keyup, keypress": list keyboard events 
+"focus, focusin, focusout, blur": list focus events
+"load, resize, unload, scroll, error": list document events
+"change, select, submit": list form and input events
+"direct": in which order handlers are fired?
+"bind('keydown keypress': x), bind({keydown: x, keypress: x})": what are the syntactic alternatives to bind keydown and keypress to function x?
+"event.preventDefault(); event.stopPropagation()": what is the effect of .bind('keypress', false)?
+".keypress(function() { return false })": what is longer form (instead of false) of .keypress(false)?
+"(eventType, handler(event)), (eventType, data, handler(event)), (eventType, false), ({eventType: handler(event)})": What are the signatures for bind?
+".click('v', function(event) { alert(event.data) })": example when eventData 'v' is used in click
+"dblclick; verying behavior browser-wise and OS-wise": Which event is discouraged to bind togather with click? Why?
+"$('p').bind('mouseenter mouseleave', function() { $(this).toggleClass('c') }": highlight p with class c when hovered
+"trigger('blur')": What is longer form for blur()?
+"bind('blur', handler)": What is longer form for blur(handler)?
+"$(document.body).focusout(h)": use function h to handle any event when focus leaves control
+
+# CONTINUE:
+# http://api.jquery.com/category/events/event-object/
+# http://api.jquery.com/category/events/
+# change

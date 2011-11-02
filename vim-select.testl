@@ -1,0 +1,25 @@
+"o":          exchange cursor position with start of highlighting
+"v|V|^v":     start selecting characters|lines|blocks
+"gv":         start highlighting of previous selection
+# clipboard
+"y|d|c":      copy to clipboard|cut to clipboard|change selected(visual)
+"P|p":        paste before|after cursor
+"[P|]p":      paste before|after cursor with intend adjusted
+"gP|gp":      paste before|after cursor, leave cursor after new text
+"\"5":        use register 5 for next delete, yank, put
+"qc|qC|q":    start|append recording to register c|quit recording
+"@c":         run macro in register c
+
+# selection objects
+"aw|iw":      word with|without whitespace (visual)
+"aW|iW":      wide word with|without whitespace (visual)
+"as|is":      a|inner sentence (visual)
+"ap|ip":      a|inner paragraph (visual)
+"ab|ib":      "a|inner () block (visual)"
+"aB|iB":      "a|inner {} block (visual)"
+"at|it":      "a|inner <tag> </tag> (visual)"
+"a<|i<":      "a|inner <> block (visual)"
+"a[|i[":      "a|inner [] block (visual)"
+
+# ranges
+",|.|$|%|*":  "in ranges: separate range|current line|last line|entire file|view area"

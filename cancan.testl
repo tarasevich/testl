@@ -1,0 +1,24 @@
+---
+"class Ability; include CanCan::Ability; def initialize(user); end; end": write template abilities class
+":manage": alias that refers to any action
+":all": alias that refers to any object
+"can :read, Project, user_id: user.id": user can show|index a project only if owns the project (declare)
+"with OR: released or avialable for preview": "How these consequent declarations combine: can :read, Project, released: true; can :read, Project, preview: true"
+"can :manage, :all if user.admin?": give all permissions to an admin
+"raise CanCan::AccessDenied.new 'Not Enough Pervileges', :read, Project": throw authentication error for reading a Project
+"rescue_from CanCan::AccessDenied do |e|; render file: \"#{Rails.root}/public/403.html\", status: 403 end": handle cancan error with status 403
+"authorize! :show, @project": how to authorize access to @project in body of show action?
+"load_and_authorize_resource": How to authorize access to any action in the controller?
+"load_resource; authorized_resource": What you can use instead of laod_and_authorize_resource?
+"skip_load_resource only: :new; before_filter :custom, only: :new": how to customize loading of the model only for a given method
+"Project.accessible_by(current_ability, :read)": scope for Project model, that a current user can read
+"accessible_by": Which method is used to load resource for index action?
+"@products = @products.includes(:category)": how to customize request (add .cinludes(:category) if projects are loaded by CanCan in a controller
+"Project.find(params[:id])": How project is loaded for show, edit, update and delete?
+"@project = Project.new({discontinued: true}.merge(params[:project]))": how project is instantiated for new and create
+"load_and_authorize_resource class: Project": How to redefine default class when loading a resource?
+"prepend_before_filter :find_project": How to use find_project method to load a resource in a controller if load_and_authorize_resource in ApplicationController?
+"authorize!(params[:action], @project || Project)": What does authorize_resource do?
+"@current_ability = nil": how to reset current_ability if the current user changed?
+"alias :index, :show, to: :read": How the :read action defined?
+

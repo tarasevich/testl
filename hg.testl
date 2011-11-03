@@ -1,0 +1,22 @@
+
+"hg log -d09-20": show history for Sep 20
+"hg log -p -r 3": show diff with 3 revisions ago
+"hg log -l 3": show last 3 revisions
+"hg init my_project": create folder my_project and init repo there
+"changeset": "synonym for 'revision'"
+"the tip is the most recently changed head": relation of a tip and a head
+"creation of a new changeset based on the state of the working directory": commit is ...
+"1 or 2 parents and pending commit": what are the main characteristics of working directory
+"0, 1, or 2": how many parent changesets can have a changeset?
+"hg parents": get parent of the working directory
+"hg parents -r 5": get parent of the 5th revision
+"hg resolve --list": list files with conflicts
+"hg resolve f": resolve file f
+"hg resolve --mark f": mark file f as resolved
+"hg clone dir1 dir2": copy repository dir1 to dir2
+"hg incoming ../dir2": difference of clone ../dir2 from repo .
+"hg pull ../dir2": get changes from clone ../dir2 into current repo
+"hg serve and firefox localhost:8000/graph": view revisions graph
+"hg serve and hg pull http://localhost:8000": get changes through web server
+"hg export -r -1 > f": create patch f for the last revision
+

@@ -1,0 +1,16 @@
+"add code before raquire 'rails/all' in config/application.rb": how to run code before initialization of Rails
+"init framework, plugins, engines, config/initializers": what initialized before config.after_initialize
+"config.allow_concurrency = true": how to enable threadsafe concurrent action processing?
+"config.asset_host": option that used for hosts for CDNs for hosting assets
+"config.asset_path = proc { |p| "/public#{p}" }": how to decorate asset path
+"if the asset pipeline is enabled (and it's default)": When config.asset_path is ignored?
+"config.autoload_once_paths, config.autoload_paths": properties with paths from where Rails will autoload constants
+"all directories under app": what is the default paths to autoload constants?
+"config.autoload_once_paths += [p]": force to autoload constants just once from path p
+"reload application classes and modules on each request": What is the effect of config.cache_classes = false?
+"false for development, true for production and test": what is the default for config.cache_classes?
+"config.action_view.cache_template_loading = false": How to force view reloading each request?
+"config.cache_classes": What is the default value for config.action_view.cache_template_loading?
+"config.cache_store = :memory_store": set memory cache store
+"tmp/cache": where is cache store kept by default?
+"config.consider_all_requests_local = false; implement local_request? per control": how to define fine grained reporting to HTTP response of debugging information for an error?

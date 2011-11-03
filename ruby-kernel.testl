@@ -1,0 +1,11 @@
+block_given?: if block is passed to the method
+caller: get current backtrace
+"fork { }": create subprocess
+"local_variables": names of local variables
+"$:": get load paths
+"require_relative": require in current dir
+"set_trace_func(proc {...})": function for manual debugging
+sleep(60): sleep for 1 minute
+"spawn 'x'": start process from command x without waiting
+test: Kernel method that return various attributes of a file
+warn: put message to STDERR

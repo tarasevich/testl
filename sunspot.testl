@@ -1,0 +1,21 @@
+#SOLR dismax
+"+ for mandatory keywords, - for optional keywords, \" for phrases": What does dismax supports?
+"q.alt": param used for case when query is blank
+
+# SOLR facets
+"facet: manufacture, facet value: Canon, facet count: number of cameras produced by Canon": Consider 'Digital Cameras internet shop' example. What could be facet, facet value and facet count?
+"constraint": What is the synonim for facet values?
+"&facet=true&facet.field=manufacturer": How to apply facet on field manufacturer in SOLR URL?
+
+# sunspot
+"string :x, using: :y": populate string field x with method y in search setup
+"text :x; text :x, using: :x; text(:x) {x}; text(:x) {|o| o.x}": syntactic variations (4) to initialize field x with method x in setup
+"string :x, multiple: true": What is the syntax for string field x, if its method returns an array?
+"string :x, stored: true": How to force storing of a field in addition to indexing?
+"integer :x, trie: true": How to optimize range searches on field :x?
+"text": Which type of fields is used for full text search?
+"fulltext": What is keywords alias for?
+"keywords q, hightlight: :f": How to specify to highlight found text only in the field :f?
+"keywords q, fields: :f": How to specify to search only field :f?
+"Hash[User.search { facet :first_name }.facet(:first_name).rows.map { |r| [r.value, r.count] }.flatten]": "compute hash: {first_name -> users with the first name}"
+

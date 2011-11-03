@@ -1,0 +1,15 @@
+# misc
+:w !sudo tee %
+
+# navigation
+"^]": navigate help tag
+"^t": move back to help tag (previously navigated)
+":help subject": get help about subject
+
+# buffers
+":hide": hide current buffer
+":buffer 5": open buffer 5
+
+# modify
+":$m .": move last line to current
+":$t .": copy last line to current

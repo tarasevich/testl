@@ -1,0 +1,21 @@
+gnome-open fp: open fp with default application in Ubuntu
+
+# tee
+"x | tee >(y) >(z)": duplicate output from command x to commands y and z
+'echo "x" | tee >(ssh h1) >(ssh h2)': execute command x on hosts h1 and h2
+
+# hardware
+cat /proc/cpuinfo: view information about CPU
+free: view available memory
+
+# processes
+ps auxf: processes with children
+
+# archives
+unzip -l fn: view file list in archive fn
+unzip fn -d dp: unzip files from archive fn to directory dp
+curl my.com | tar xz: download and unzip tar.gz file from my.com in one step
+
+# net
+curl -O my.com: download with curl from my.com and save to extracted file name
+curl -o fn my.url: download with curl from my.url to fn

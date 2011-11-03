@@ -1,0 +1,12 @@
+#debug
+"= debug x; = simple_format x.to_yaml": output value of x in YAML format in HAML (2 variants)
+"Rails.logger = Logger.new STDOUT": configure to use std logger + STDOUT 
+"Rails.logger = Log4r::Logger.new": configure to use log4r logger
+"config.logger = x": configure to use x in environment initializer
+"config.log_level = :warn": set log level to warning in an environment initializer
+"tails -f log/development.log": watch recent entries to development.log
+"gem install ruby-debug19; rails s --deubgger": prerequirements to use debugger
+"debugger": how to invoke debug breakpoint
+"list": show source around current debugger line
+"help": get help from debugger
+

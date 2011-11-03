@@ -1,0 +1,5 @@
+s.partition(sep)[2]: substring of s after sep
+s[/x*/]: substring of s that matches /x*/ 
+"strings contain \n and it's enumerator": difference of lines from split("\n")
+"s.tr('a-z', 'b-za')": rotate string characters (a->b, b->c, ... z->a)
+"upcase": convert to uppercase

@@ -1,0 +1,1 @@
+"config.filter_run focus: true; config.run_all_when_everything_filtered": how to configure scenario to run marked specs if there are some and run all specs when there are no marked specs?

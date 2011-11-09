@@ -19,3 +19,10 @@ curl my.com | tar xz: download and unzip tar.gz file from my.com in one step
 # net
 curl -O my.com: download with curl from my.com and save to extracted file name
 curl -o fn my.url: download with curl from my.url to fn
+
+# search
+grep -v x: select lines that does not contain x
+
+# higher order
+xargs -n1 x: apply command x for each line in stdin
+xargs -i echo [ {} ]: wrap each input line in [ ]

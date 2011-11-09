@@ -1,0 +1,9 @@
+200 OK: standard response for successful request.
+201 Created: the request has been fulfilled and resulted in a new resource being created.
+202 Accepted: the request has been accepted for processing but the processing has not been completed.
+203 Non-Authoritative Information: processing is successful but response might be from external sources
+204 No Content: processing is successful but returning no content
+205 Reset Content: successful processing, returning no content, requester should reset the document view
+206 Partial Content: part of resource according to request range header
+207 Multi-Status: message contains XML with multiple codes for subrequests
+226 IM Used: response is representation of  multiple instance manipulations applied to the resource

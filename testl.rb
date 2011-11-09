@@ -1,4 +1,4 @@
-require 'YAML'
+require 'yaml'
 
 def process file
     h = YAML.load(File.read(file))

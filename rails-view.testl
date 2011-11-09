@@ -1,0 +1,1 @@
+"link_to 'Delete', post_path(id), method: :delete, confirm: t(:delete_sure?)":create link that deletes a post with confirmation

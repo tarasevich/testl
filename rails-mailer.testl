@@ -1,0 +1,20 @@
+"rails g mailer UserMailer": generator for user emails
+"from, to, subject": minimal set of headers for email
+"app/views/user_mailer": path to views for user emails
+"action mailer automatically detects two templates and generates a multipart/alternative email": how duplicated html and text email templates are handled?
+"from UsersController: UserMailer.welcome_email(@user).deliver": Where from and how to send UserMailer#welcome_email?
+"mail 'X-Y' => '1'|headers['X-Y'] = '1'|headers 'X-Y' => '1'": syntactic alternatives to specify header X-Y=1
+"Base64, it splits binary data by 6 bits and uses [A-Za-z0-9+/] to encode": what is the default encoding for attachments and what is its essence?
+"attachments['x.jpg'] = content_str": give example how to define attachment
+"action mailer will not Base64-encode it": what is the consequence if you specify encoding explicitly?
+"attachments['filename.jpg'] = {:mime_type => 'application/x-gzip', :encoding => 'SpecialEncoding', :content => encoded_content }": give example of explicitly specifying attachment encoding
+"attachments.incline['x.jpg'] = content": give example how to pass inline attachment
+"= image_tag attahcments['x.jpg'].url": show x.jpg inline image attachment in view
+'mail to: "#{user.name} <#{user.email}>"': send email that shows the recipient's name instead of email
+"mail template_name: 'x'": How to use template x instead of default?
+"mail(to: email, subject: subject) { |format| format.text { render text: text } } ": How to render email with some text?
+"mail(to: email, subject: subject) { |format| format.html { render layout: 'my_layout' } }": define custom layout for the mailer action
+"one need to pass host": what is the specifics of using named urls in mailer comparing to controller
+"config.action_mailer.default_url_options host: 'x.com'": how to specify 'x.com' to be used as default host in mailer URLs?
+# TODO: parsing emails
+"config.action_mailer.delivery_method = :test; check ActionMailer::Base.deliveries": How to test the sent mails?

@@ -12,6 +12,3 @@
 "javascripts/all.js": the default js file for caching
 "image_tag 'x.png', onmouseover: 'y.png'": define alternative image for onhover
 
-# paths
-
-"redirect_to, link_to, url_for": which methods accept varying URI options?

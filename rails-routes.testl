@@ -1,0 +1,6 @@
+---
+# paths
+
+"redirect_to, link_to, url_for": which methods accept varying URI options?
+"articles_path(:anchor => 'content')": generate /acticles#content using resource-oriented syntax
+edit_polymorphic_path(@user || @group): path to edit @user || @group

@@ -1,0 +1,4 @@
+"psql dn < fn": apply dump fn to database dn
+"createdb dn": create database dn from shell
+"dropdb dn": drop database dn from shell
+"\q": quit from Postgres REPL

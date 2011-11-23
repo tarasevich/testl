@@ -12,3 +12,9 @@
 "javascripts/all.js": the default js file for caching
 "image_tag 'x.png', onmouseover: 'y.png'": define alternative image for onhover
 
+# links
+
+link_to_if, link_to_unless, link_to_unless_current: list 3 conditional versions of list_to
+button_to: alternative for link_to for requests with side effects
+"current_page? action: 'x'": verify if the current action is 'x'?
+

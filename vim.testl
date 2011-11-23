@@ -1,10 +1,11 @@
 "vim fn +54":  open file fn and go to 54th line
-"vim -O f1 f2": open files f1 and f2  
+"vim -O f1 f2": open files f1 and f2
 "~/.vimrc|set clipboard=unnamed": "configure vim to use clipboard: file|command"
 ":!c":         execute c
 ":r !c":       execute c and insert below the cursor
-":r fl":       write content of file fl below the cursor	
-
+":r fl":       write content of file fl below the cursor
+":w !sh":      execute current line without modifying it
+":.!sh":       execute current line and replace it with the command output
 
 "ga":          show character info
 "i|gI|I|a|A|o|O": start inserting before cursor|interst before first char|insert before first non-whitespace|insert after|insert at end|insert line after the current|insert line before the current

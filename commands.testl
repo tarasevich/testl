@@ -1,15 +1,18 @@
 gnome-open fp: open fp with default application in Ubuntu
 
-# tee
-"x | tee >(y) >(z)": duplicate output from command x to commands y and z
-'echo "x" | tee >(ssh h1) >(ssh h2)': execute command x on hosts h1 and h2
+# ubuntu
+cat /etc/issue: get current version of Ubuntu
 
 # hardware
 cat /proc/cpuinfo: view information about CPU
 free: view available memory
 
 # processes
-ps auxf: processes with children
+ps auxf: view processes with children
+
+# pipes
+"x | tee >(y) >(z)": duplicate output from command x to commands y and z
+'echo "x" | tee >(ssh h1) >(ssh h2)': execute command x on hosts h1 and h2
 
 # archives
 unzip -l fn: view file list in archive fn
@@ -20,8 +23,16 @@ curl my.com | tar xz: download and unzip tar.gz file from my.com in one step
 curl -O my.com: download with curl from my.com and save to extracted file name
 curl -o fn my.url: download with curl from my.url to fn
 
+# files
+du -h f: get size of file f
+du -s -h d: get total size of directory d
+
 # search
 grep -v x: select lines that does not contain x
+"awk '{sub(/x/,\"y\")};1'": substitute substring x in all lines in stdin with y (using AWK)
+"sed 's/xx/yy/g'": replace ALL occurrences substring xx with yy in all lines in stdin
+"sed '/zz/ s/xx/yy/'": replace substring xx with yy if a line contains zz
+"sed -n '5,9p' f": display lines 5..9 from file f
 
 # higher order
 xargs -n1 x: apply command x for each line in stdin

@@ -1,0 +1,25 @@
+# rails-independent
+
+curb-fu: http client
+settinslogic: gem for wrapping yaml config
+
+# rails-aware
+
+tabs_on_rails: gem for tabs
+set_tab name, namespace: set current tab
+
+descent_exposure: gem to introduce lazy values to views
+
+# irb tools
+
+ori: gem to access ri documentation from irb
+"C.ri :m": get documentation for method C#m in irb
+
+hirb: gem to display arrays as tables
+table a: display array as table in irb
+"table a, fields: [:f, :g]": display in table fields f and g of objects in array a
+"Hirb.enable output: {C: {options: {fields: [:f]}}}": configure hirb to display in table for class C only field f
+
+# services
+
+"geocode caching": what for redis is used in novu?

@@ -1,0 +1,1 @@
+redcloth README.textile | lynx -stdin: view README.textile in formatted pseudographics

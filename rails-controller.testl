@@ -1,0 +1,7 @@
+protect_from_forgery: almost mandatory directive for security in ApplicationController
+"get? ? render : has_errors? ? render(action: post? ? :new : :new) : redirect_to resource": What is default implementation for ActionController::Responder#to_html
+"flash.now.notice = n": pass flash notice n to current action
+
+# filters
+
+"render or redirect": How to prevent execution of the action from before_filter?

@@ -26,6 +26,7 @@ curl -o fn my.url: download with curl from my.url to fn
 # files
 du -h f: get size of file f
 du -s -h d: get total size of directory d
+man hier: information about file hierarchy
 
 # search
 grep -v x: select lines that does not contain x
@@ -33,6 +34,8 @@ grep -v x: select lines that does not contain x
 "sed 's/xx/yy/g'": replace ALL occurrences substring xx with yy in all lines in stdin
 "sed '/zz/ s/xx/yy/'": replace substring xx with yy if a line contains zz
 "sed -n '5,9p' f": display lines 5..9 from file f
+"cut -c 2-10": take characters 2..10 from each line of stdin
+"cut -d ' ' -f 2-4": take space-separacted columns 2..4 from stdin
 
 # higher order
 xargs -n1 x: apply command x for each line in stdin

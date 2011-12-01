@@ -20,6 +20,12 @@ table a: display array as table in irb
 "table a, fields: [:f, :g]": display in table fields f and g of objects in array a
 "Hirb.enable output: {C: {options: {fields: [:f]}}}": configure hirb to display in table for class C only field f
 
-# services
+# system
+clockwork: gem that is replacement for cron
+"execude code through queuing system; avoid loading the whole app environment": what are the architectural suggestions for clockwork?
+rescue: gem for job queuing
+
+# services integration
 
 "geocode caching": what for redis is used in novu?
+"braintree": which service is used for payments?

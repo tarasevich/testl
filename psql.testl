@@ -2,3 +2,5 @@
 "createdb dn": create database dn from shell
 "dropdb dn": drop database dn from shell
 "\q": quit from Postgres REPL
+"\d": list tables
+"\l": list databases

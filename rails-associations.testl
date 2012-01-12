@@ -1,0 +1,24 @@
+"No destroy callbacks are triggered": What one should be aware of when causing automatic deletion of join models (has_many through)?
+"belongs_to :commentable, polymorphic: true": How to declare in Comment model polymorphic association with a commentable?
+"has_many :comments, as: :commentable": How to declare in a commentable model polymorphic association with Comment?
+"comments(true)": how to dicard a cached association comments and get the object from the database?
+"join_table": option that specifies the table name for has_and_belongs_to_many?
+"user, user=, build_user, create_user": "methods defined by belongs_to :user or by has_one :user"
+"conditions, include, select": 3 options of belongs_to needed only for querying of the records
+":autosave, :dependent, :validate": "3 options of belongs_to for cascaded operations"
+belongs_to: "which association has :polymorphic option?"
+":delete, :destroy, :nullify": "3 values for :dependent option of has_one macro"
+":source, :source_type, :through": 3 options of has_one that configure using of join model
+"it's saved when a new 'owner' saved or when assigned to a saved 'owner'": when is a has_one object saved?
+"it's saved when a new 'owner' saved or when assigned or added to a persisted 'owner'": when a has_or_belongs_to_many object saved?
+":conditions, :finder_sql, :group, :include, :limit, :offset, :order, :select, :uniq": what are the 9 options of has_many for querying?
+"use :extend option or inside of the block": how to add methods to has_many association?
+"when a persisted owner autosaved or when they are added or assigned to the association in a persisted owner": when objects associated through has_many are saved?
+"counter_sql, delete_sql, finder_sql, insert_sql": What are the 4 *_sql options for has_and_belongs_to_many association?
+"before_add, after_add, before_remove, after_remove": What are the 4 association callbacks?
+"proxy_owner, proxy_reflection, proxy_target": What are the 3 accessors available to association extensions?
+"has_many :groups, through: :memberships, source: :memberable, source_type: 'Group'": "Given tables users, memberships, groups; Membership.belongs_to :memberable, polymorphic: true; define association :groups in class User"
+has_and_belongs_to_many: "Which type of association is missing :dependent option?"
+"has_and_belongs_to_many": "When :dependent option takes effect?"
+"self.destroy, association.delete(...), association=, association.clear": "Which methods trigger :dependent option of has_many association"
+"It enables reusing model instances": "What is the advantage of using :inverse_of?"

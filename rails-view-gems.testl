@@ -1,0 +1,11 @@
+tabs_on_rails: gem for tabs
+"tabs_tag { |t| t.h 'H', h_path }": show single tab 'H' for h_path with name h
+"set_tab :h": define active tab
+
+carmen: gem for selecting countries
+"f.country_select(:country, 'US')": country input
+
+nested_form: gem for nested forms
+"accepts_nested_attributes_for :tasks": declaration in model to support nested forms
+"attr_accessible :tasks_attributes": how to make accessible attributes for nested form for tasks
+"= nested_form_for @project do |f|": insert in view form with nested forms

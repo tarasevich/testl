@@ -48,8 +48,15 @@ top: processes
 tail -f fn: output new data as file fn grows
 watch -n 2 -d c: refresh every 2 seconds output of command c and highlight differences
 
+# permissions
+chmod u=xrw fn: let owner do everything with file fn
+chmod o= fn: prohibit any access to file fn for 'others'
+chmod g=r fn: allow only read access to file fn for the owning group
+"ssh-agent -c 'ssh-add ~/.ssh/github_wc ; bash'": add private key for ssh
+
 # search
 grep -v x: select lines that does not contain x
+grep -B 2 -A 3 x: search for x in stdin and display additionally 2 lines before and 3 after
 "awk '{sub(/x/,\"y\")};1'": substitute substring x in all lines in stdin with y (using AWK)
 "sed 's/xx/yy/g'": replace ALL occurrences substring xx with yy in all lines in stdin
 "sed '/zz/ s/xx/yy/'": replace substring xx with yy if a line contains zz

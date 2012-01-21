@@ -4,18 +4,32 @@
 "load, resize, unload, scroll, error": list document events
 "change, select, submit": list form and input events
 "direct": in which order handlers are fired?
-"bind('keydown keypress': x), bind({keydown: x, keypress: x})": what are the syntactic alternatives to bind keydown and keypress to function x?
+"bind('keydown keypress', x), bind({keydown: x, keypress: x})": what are the syntactic alternatives for keydown(x).keypress(x)?
 "event.preventDefault(); event.stopPropagation()": what is the effect of .bind('keypress', false)?
 ".keypress(function() { return false })": what is longer form (instead of false) of .keypress(false)?
 "(eventType, handler(event)), (eventType, data, handler(event)), (eventType, false), ({eventType: handler(event)})": What are the signatures for bind?
 ".click('v', function(event) { alert(event.data) })": example when eventData 'v' is used in click
-"dblclick; verying behavior browser-wise and OS-wise": Which event is discouraged to bind togather with click? Why?
-"$('p').bind('mouseenter mouseleave', function() { $(this).toggleClass('c') }": highlight p with class c when hovered
+"dblclick; varying behavior browser-wise and OS-wise": Which event is discouraged to bind togather with click? Why?
+"$('p').bind('mouseenter mouseleave', function() { $(this).toggleClass('c') })": highlight p with class c only when hovered
 "trigger('blur')": What is longer form for blur()?
 "bind('blur', handler)": What is longer form for blur(handler)?
-"$(document.body).focusout(h)": use function h to handle any event when focus leaves control
+"$(document.body).focusout(h)": use function h to handle events when focus leaves any control
+
+# submit
+"event.preventDefault()": what is sufficient to prevent actual submission from submit handler?
+"yes": does submit work with event delegation in Jquery under IE?
+"They should not conflict with form properties such as submit, length or method": What is the restriction on input names and ids?
+
+# over, out, enter, leave
+"mouseout is bubbled to outer elements, while mouseleave is not": What is the difference in behavior between mouseout and mouseleave events?
+"mouseenter, mouse leave; though they simulated by jquery": Which of the mouse enter, leave, out, over events are cross-browser compatible? What are the implications for jQuery users?
+
+"text input and textarea elements; it triggered when a user select a text fragment": What elements trigger select event? In which case?
+"non-bubble: focus, blur, mouseenter, mouseleave; bubble: focusin, focusout, mouseover, mouseleave": What events do not bubble? What are there bubbling counterparts? (MAYBE INCOMPLETE LIST)
+"error event relies on HTTP status codes": "Why error handler will not work with file: protocol?"
 
 # CONTINUE:
 # http://api.jquery.com/category/events/event-object/
 # http://api.jquery.com/category/events/
 # change
+# on

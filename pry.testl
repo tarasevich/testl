@@ -1,0 +1,15 @@
+binding.pry: start inline pry session from and in context of source code
+pry -r ./config/environment: start pry session with rails invironment
+nesting: analog command of pwd
+exit: pry analog of cd .. command
+"show-doc Object#try": view documentation for method try
+"show-method f": view method f source from the current context
+"edit-method f": edit method f in text editor
+"_file_": file for current context
+".vim #{_file_}": open file of the current context with vim editor
+"Pry.config.editor = 'gvim' # in .pryrc": How to define default editor?
+"edit-method f ; insert binding.pry inside of f; f; eval something; exit": Describe steps to debug method f
+"ls -Mj": show the instance methods defined directly in this class
+"gem-cd activerecord": go to the directory of activerecord gem
+"whereami": show binding.pry location
+"silence_warnings { require 'pry' ; IRB = Pry } # in environments/development.rb": Substitute irb with pry in rails

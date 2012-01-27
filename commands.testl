@@ -9,6 +9,7 @@ free: view available memory
 
 # processes
 ps auxf: view processes with children
+ps -C skype -o pid= | xargs kill: kill skype process
 
 # pipes
 "x | tee >(y) >(z)": duplicate output from command x to commands y and z
@@ -23,6 +24,10 @@ curl my.com | tar xz: download and unzip tar.gz file from my.com in one step
 curl -O my.com: download with curl from my.com and save to extracted file name
 curl -o fn my.url: download with curl from my.url to fn
 
+# directory
+"ls -p -1 | grep -v /": show only non-directory files
+mkdir -p d1/d2: create directory d1/d2 (if d1 does not exist)
+
 # files
 du -h f: get size of file f
 du -s -h d: get total size of directory d
@@ -33,6 +38,7 @@ chmod u=xrw fn: let owner do everything with file fn
 chmod o= fn: prohibit any access to file fn for 'others'
 chmod g=r fn: allow only read access to file fn for the owning group
 "ssh-agent -c 'ssh-add ~/.ssh/github_wc ; bash'": add private key for ssh
+useradd -G g u: and a new user u to a group g
 
 # search
 grep -v x: select lines that does not contain x

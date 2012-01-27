@@ -1,1 +1,2 @@
 redcloth README.textile | lynx -stdin: view README.textile in formatted pseudographics
+"sed 's/:/\n/' | column -x -c 80

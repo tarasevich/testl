@@ -13,6 +13,7 @@
 ":q":          close window
 "^wo":         make current window one on screen
 "^wk|^wj":     move to window above|below
+":only":       close other windows
 
 # buffers
 ":ls":         list buffers

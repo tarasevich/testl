@@ -32,6 +32,7 @@ mkdir -p d1/d2: create directory d1/d2 (if d1 does not exist)
 du -h f: get size of file f
 du -s -h d: get total size of directory d
 man hier: information about file hierarchy
+stat -c %s f: size of file f
 
 # permissions
 chmod u=xrw fn: let owner do everything with file fn

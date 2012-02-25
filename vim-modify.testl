@@ -16,3 +16,8 @@
 "J|gJ":       join with next line with|without space separator
 ":reg":       display registers
 
+# search and replace
+":.,$s/x/y/g": replace all x with y starting from current line till the end of file
+":g/x/d":      delete all lines containing x
+":v/x/d":      delete all lines not containing x
+

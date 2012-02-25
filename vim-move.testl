@@ -37,10 +37,11 @@
 "Fx|fx":      previous|next character x
 "Tx|tx":      near previous|next character x
 ",|;":        repeat T, t, F, f to the left|right
-":g/x/#":    display all lines with numbers that contain x
+":g/x/#":     display all lines with numbers that contain x
+":bufdo /x/": search all opened files for x
 
 # marks
-mx:           set mark x 
+mx:           set mark x
 "'x":         go to mark x
 "`.":         go to last edit position
 ":marks":     list marks

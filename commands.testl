@@ -11,6 +11,7 @@ lsusb -t: show usb info
 
 # processes
 ps auxf: view processes with children
+ps -C skype -o pid= | xargs kill: kill skype process
 
 # pipes
 "x | tee >(y) >(z)": duplicate output from command x to commands y and z
@@ -33,26 +34,32 @@ date +%X: display local time
 echo 'c' | at 2:00": execute command c at 2:00
 cal: display calendar for the current month
 
-# file system
+# monitoring
+top: processes
+tail -f fn: output new data as file fn grows
+watch -n 2 -d c: refresh every 2 seconds output of command c and highlight differences
+
+# files
+less: view file
+
+# directory
+"ls -p -1 | grep -v /": show only non-directory files
+mkdir -p d1/d2: create directory d1/d2 (if d1 does not exist)
+
+# files
 df -h: show sized of disks
 du -h f: get size of file f
 du -s -h d: get total size of directory d
 man hier: information about file hierarchy
 tree: view file system subtree
-
-# files
-less: view file
-
-# monitoring
-top: processes
-tail -f fn: output new data as file fn grows
-watch -n 2 -d c: refresh every 2 seconds output of command c and highlight differences
+stat -c %s f: size of file f
 
 # permissions
 chmod u=xrw fn: let owner do everything with file fn
 chmod o= fn: prohibit any access to file fn for 'others'
 chmod g=r fn: allow only read access to file fn for the owning group
 "ssh-agent -c 'ssh-add ~/.ssh/github_wc ; bash'": add private key for ssh
+useradd -G g u: and a new user u to a group g
 
 # search
 grep -v x: select lines that does not contain x

@@ -15,6 +15,6 @@
 "mail(to: email, subject: subject) { |format| format.text { render text: text } } ": How to render email with some text?
 "mail(to: email, subject: subject) { |format| format.html { render layout: 'my_layout' } }": define custom layout for the mailer action
 "one need to pass host": what is the specifics of using named urls in mailer comparing to controller
-"config.action_mailer.default_url_options host: 'x.com'": how to specify 'x.com' to be used as default host in mailer URLs?
+"config.action_mailer.default_url_options = {host: 'x.com'}": how to specify 'x.com' to be used as default host in mailer URLs?
 # TODO: parsing emails
 "config.action_mailer.delivery_method = :test; check ActionMailer::Base.deliveries": How to test the sent mails?

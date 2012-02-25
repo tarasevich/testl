@@ -1,8 +1,9 @@
 # file commands
 ":x|ZZ":       save if changed and exit (2 vars)
 ":wq":         save and exit
+":wa":         save all buffers
 ":sav fn":     save as fn
-":5w>>fn":     append range 5 to file 
+":5w>>fn":     append range 5 to file
 ":e":          reload the current file
 ":wn":         write file and edit next
 
@@ -12,6 +13,7 @@
 ":q":          close window
 "^wo":         make current window one on screen
 "^wk|^wj":     move to window above|below
+":only":       close other windows
 
 # buffers
 ":ls":         list buffers

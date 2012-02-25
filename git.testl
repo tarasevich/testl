@@ -1,2 +1,4 @@
 git checkout -b b: move changes to a new branch b
 git clean -n -d p: delete all untracked files and directories at path p (dry run)
+git config --list: view all configurations
+"git push origin :b": delete remote branch b from origin

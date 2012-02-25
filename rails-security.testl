@@ -63,5 +63,6 @@ put it to a subdomain, use SSL, expire session: How to protect security-sensitiv
 "whitelist over blacklist; reject malformed input instead of correcting it": what are 2 principles when sanitizing or validating something?
 "rejecting over correcting": what is approach to dangerous input?
 "blacklists are never complete": what is the problems with blacklists for security?
+"filter_parameter_logging :password": how to prevent passwords from being shown in logs?
 
 # append

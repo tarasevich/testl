@@ -1,0 +1,2 @@
+module_eval: what is the alias for class_eval?
+def adds class method for instance_eval and instance method for class eval: what is the difference between instance_eval and class_eval if applied to a class?

@@ -1,6 +1,6 @@
 "mark scenarios with js: true and Capybara.javascript_driver = :culerity": How to apply Culerity driver only to the scenarios that require javascript?
 "use attribute dirver: :webkit for the scenario": How to apply a driver webkit to a specific scenario?
-"describe "a", type: :request": "What feature 'a' is equivalent to?"
+"describe 'a', type: :request": "What feature 'a' is equivalent to?"
 ":rack_test": What is the default driver?
 ":selenium": What is the default JavaScript-enabled driver?
 "Capybara.current_driver = :webkit; ...; Capybara.use_default_driver": Describe scenario of changing driver and switching back to default driver?
@@ -10,7 +10,7 @@
 ":css": What is the default locator type?
 "It will wait the element to disappear if it's present": Why to use methods with 'no' such as has_no_selector? ?
 "a[:href]": How to get href attribute of found a element?
-"It will wait for them for Capybara.default_wait_time seconds": How find method handles elements that might appear dynamically on the page?
+"It will wait for them for Capybara.default_wait_time seconds if Capybara.automatic_reload is true": How find method handles elements that might appear dynamically on the page?
 "first": Does within searches for all or first matching elements?
 "It checks Capybara.prefer_visible_elements": How find method handles visibility?
 "In the same process, but in different thread": Where does Capybara starts server process-wise for JavaScript-enabled drivers?

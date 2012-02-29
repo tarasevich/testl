@@ -1,0 +1,10 @@
+"config.assets.enabled = false": disable assets pipeline
+"Rails inserts md5 fingerprint into file name": How Rails insures caching of compiled files?
+"config.assets.digest, its true for production and false otherwise": Which configuration controls fingerprinting? What are the defaults for it?
+"app/assets, lib/assets, vendor/assets": What are the default places to lookup assets?
+"add .erb extension after other extensions and use erb tags": How to use erb in assets?
+"require, require_tree, require_directory, require_self": Which directives sprockets supports in manifest file?
+"@import": What should I prefer instead of sprocket directives in sass?
+"by using corresponding extension right-to-left": How additional layers of preprocessing can be requested in assets pipeline?
+"config.assets.debug = false; outputs single file instead of multiple": How to turn off debug mode for assets? What will be the effect?
+"application is loaded just partially to precompile assets faster": What is the effect of config.assets.initialize_on_precompile = false?

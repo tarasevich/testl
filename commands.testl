@@ -5,7 +5,9 @@ cat /etc/issue: get current version of Ubuntu
 
 # hardware
 cat /proc/cpuinfo: view information about CPU
+cat /proc/meminfo: view information about memory
 free: view available memory
+lsusb -t: show usb info
 
 # processes
 ps auxf: view processes with children
@@ -24,14 +26,32 @@ curl my.com | tar xz: download and unzip tar.gz file from my.com in one step
 curl -O my.com: download with curl from my.com and save to extracted file name
 curl -o fn my.url: download with curl from my.url to fn
 
+# time
+date: display current date
+date +%a: display current day of week
+date +%d: display current day of month
+date +%X: display local time
+echo 'c' | at 2:00": execute command c at 2:00
+cal: display calendar for the current month
+
+# monitoring
+top: processes
+tail -f fn: output new data as file fn grows
+watch -n 2 -d c: refresh every 2 seconds output of command c and highlight differences
+
+# files
+less: view file
+
 # directory
 "ls -p -1 | grep -v /": show only non-directory files
 mkdir -p d1/d2: create directory d1/d2 (if d1 does not exist)
 
 # files
+df -h: show sized of disks
 du -h f: get size of file f
 du -s -h d: get total size of directory d
 man hier: information about file hierarchy
+tree: view file system subtree
 stat -c %s f: size of file f
 
 # permissions
@@ -54,3 +74,7 @@ grep -B 2 -A 3 x: search for x in stdin and display additionally 2 lines before 
 # higher order
 xargs -n1 x: apply command x for each line in stdin
 xargs -i echo [ {} ]: wrap each input line in [ ]
+
+# remote
+"ssh u@h 'c'": execute command c at host h as user u
+"ssh-copy-id u@h": copy public key to host h as user u 

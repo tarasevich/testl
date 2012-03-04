@@ -1,0 +1,21 @@
+"$(s1).add(s2)": select elements that match selectors s1 or s2
+"$(s1).find(s2).andSelf()": select elements s1 and togather with their children matching s2
+"children match only direct descendants": what's the difference between children and find?
+"contents() additionally matches text and comment nodes": What's the difference between children() and contents()?
+"eq()": reduce set to an element with given index
+"find(selector) traversed descendants, while filter(selector) traverses the set itself": what the difference between .find(selector) and .filter(selector)?
+"first()": eq(0)
+"filter(selector) apply selector to elements themself, while has(selector) checks if the element has a child that matches the selector": "what's the difference between filter(selector) and has(selector)?"
+"is(selector) returns true if a matching element exists, while filter(selector) return the matching elements themselves": "What's the difference between is(selector) and filter(selector)?"
+"not": what is analog of Ruby's reject?
+"no": does parentsUntil(selector) include the element matching the selector?
+
+
+"closest, offsetParent, parent, parents": list all methods that traverse ancestors.
+"children, contents, find, has": list all methods that traverse descendants.
+"andSelf, end": list all methods that use previous jQuery object on traversal stack
+"filter, first, eq, is, last, map, not, slice": Which methods traverse only the elements in the current set?
+"next, nextAll, nextUntil, prev, prevAll, prevUntil, siblings": list all methods that traverse siblings
+"nextUntil, parentsUntil, prevUntil": all methods with Until suffix
+"children, contents, next, parent, prev": all methods that traverse direct neighbors in DOM tree
+"find, parents, siblings, nextAll, prevAll": all methods that traverse in-depth (e.i. not just direct neighbors in DOM tree

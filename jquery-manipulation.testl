@@ -11,12 +11,12 @@
 "unwrap": remove parents from DOM, but leave the matched elements in their place
 "detach, empty, remove, unwrap": list DOM removal methods
 "replaceAll, replaceWith": list DOM replacement methods
-"replaceAll, wrapAll, insertBefore, prependTo, appendTo, insertAfter": list methods that might move in DOM the matched elements
-"replaceWith, before, prepend, append, after": list methods that might move in DOM the argument
+"replaceAll, insertBefore, prependTo, appendTo, insertAfter": list methods that might move in DOM the matched elements
+"replaceWith, html, before, prepend, append, after": list methods that might move in DOM the argument
 "clone": methods that deep copy the matched elements
 "wrap, wrapAll, wrapInner": methods that copy argument
-"replaceAll, wrap, wrapAll, wrapInner, insertBefore, insertAfter, appendTo, prependTo": methods that treat string as selectors
-"replaceWith, wrapInner, html, before, prepend, append, after": methods that treat string as HTML
+"replaceAll, wrap, wrapAll, insertBefore, insertAfter, appendTo, prependTo": methods that treat string as selectors
+"replaceWith, html, before, prepend, append, after": methods that treat string as HTML
 "text": methods that treat string argument as text
 "detach, remove, replaceWith": list methods that remove matched elements from DOM
 "empty, html, text": methods that remove child elements from DOM
@@ -42,3 +42,6 @@
 "CSS position=absolute, fixed, or relative": What is positioned element?
 "offset, offsetParent, position, scrollLeft, scrollTop": methods from Offset category
 "innerHeight, outerHeight, innerWidth, outerWidth, position": "'read-only' methods"
+"offset() is relative to document, position() is relative to offset parent": What is the difference between offset() and position()?
+"prop": Which function should be used to get these values:  selectedIndex, tagName, nodeName, nodeType, ownerDocument, defaultChecked, and defaultSelected?
+"prop('checked')": What is the recommended way to compute if a checkbox is checked?

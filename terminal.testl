@@ -1,0 +1,6 @@
+c-z: send to background
+c-a: start of line
+c-e: end of line
+c-u: delete line
+c-k: delete line from cursor
+s-c-w: close tab

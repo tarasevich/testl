@@ -12,7 +12,9 @@
 "R":          override mode
 "esc|^[":     abandon editing
 "~":          change the case of characters
-
+":%!xxd":     switch to hex view mode
+":%!xxd -r":  turn off hex view mode
+":set bomb | set fileencoding=utf-8 | w": convert file to utf-8
 
 # folding
 "zf":         create fold of next movement

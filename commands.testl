@@ -25,6 +25,7 @@ curl my.com | tar xz: download and unzip tar.gz file from my.com in one step
 # net
 curl -O my.com: download with curl from my.com and save to extracted file name
 curl -o fn my.url: download with curl from my.url to fn
+"lsof -i :3000": discover the process that listens to port 3000
 
 # time
 date: display current date
@@ -77,4 +78,4 @@ xargs -i echo [ {} ]: wrap each input line in [ ]
 
 # remote
 "ssh u@h 'c'": execute command c at host h as user u
-"ssh-copy-id u@h": copy public key to host h as user u 
+"ssh-copy-id u@h": copy public key to host h as user u

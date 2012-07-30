@@ -1,1 +1,2 @@
 "default_scope order('x ASC')": define default ordering for a model
+"person.class.human_attribute_name('first_name')": given object person, get displayable name for its first_name attribute

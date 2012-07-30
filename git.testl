@@ -1,10 +1,17 @@
 git checkout -b b: move changes to a new branch b
+git checkout -: checkout to previous branch
 git clean -n -d p: delete all untracked files and directories at path p (dry run)
 git config --list: view all configurations
 "git push origin :b": delete remote branch b from origin
+"git push origin HEAD:master": push current branch to remote origin master
+git checkout HEAD -- path: git checkout path ; git reset path by single command
 
 # branches
 git branch --merged: view merged branches
 git branch --no-merged: view not merged branches
 git show heads/tmp: show head commit for branch tmp if there is also tmp directory
 git branch -a: list both remote tracking branches and local branches
+git checkout -b b origin/b: checkout remote branch b (if no local branch b)
+
+# committing
+git add -e f: add to commit part of file f

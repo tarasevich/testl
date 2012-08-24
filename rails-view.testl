@@ -5,6 +5,7 @@
 
 # assets
 
+"It allows asset_host configuration to be applied transparently to load images from other hosts": Why to use e.g. image_path instead of hard-coding an image path?
 "auto_discovery_link_tag, javascript_include_tag, stylesheet_link_tag, image_tag, video_tag, audio_tag, favicon_link_tag": 7 asset tag methods
 "audio_path, image_path, javascript_path, stylesheet_path, video_path": methods that return paths to assets
 "javascript_include_tag :all, recursive: true, :cache => true": include all js including subfolders and save to file
